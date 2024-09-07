@@ -13,6 +13,12 @@ public class App {
 
         while (true) {
             guess = in.nextLine();
+
+            if (guess.equals("stop")) {
+                System.out.println("Stopping...");
+                break;
+            }
+
             guessCount++;
             if (guess.equals(answer)) {
                 System.out.println("Correct!");
