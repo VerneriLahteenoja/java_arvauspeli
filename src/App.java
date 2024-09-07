@@ -5,6 +5,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         String answer = "John";
         String guess = "";
+        int guessCount = 0;
         Scanner in = new Scanner(System.in);
         
         
@@ -12,8 +13,10 @@ public class App {
 
         while (true) {
             guess = in.nextLine();
+            guessCount++;
             if (guess.equals(answer)) {
                 System.out.println("Correct!");
+                System.out.printf("You guessed %d times\n", guessCount);
                 break;
             } else {
                 System.out.println("Wrong, try again.");
